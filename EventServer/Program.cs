@@ -25,15 +25,18 @@ var server = new EzSocketListener(new EzEventsListener() {
 	},
 	OnMessageReadHandler = (EzSocket socket, byte[] data) => {
 		var receivedData = Encoding.Default.GetString(data).Split(' ');
-		if (receivedData[0] is "GET" && receivedData.Length is 1) {
+		if (receivedData[0] is "GET" && receivedData.Length is 1 && people.Count is > 0) {
 			var stringBuilder = new StringBuilder();
 			for (var i = 0; i < people.Count; i++) {
 				_ = stringBuilder.Append($"{i + 1}) {people[i]?.Name}\n");
 			}
 			socket.SendMessage(stringBuilder.ToString());
+		} else if (receivedData[0] is "GET" && receivedData.Length is 1 && people.Count is 0) {
+			socket.SendMessage($"List is empty");
 		} else if (receivedData[0] is "ADD" && receivedData.Length is > 1) {
-			people.AddPerson(string.Join(' ', receivedData, 1, receivedData.Length - 1));
-			socket.SendMessage("ADD OK");
+			var name = string.Join(' ', receivedData, 1, receivedData.Length - 1);
+			people.AddPerson(name);
+			socket.SendMessage($"Added {name}");
 		} else {
 			socket.SendMessage($"You entered an invalid operation");
 		}
