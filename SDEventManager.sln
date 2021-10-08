@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventClient", "EventClient\EventClient.csproj", "{8FD124B0-F616-4AB1-BEE8-3E54B06738DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{393265B4-2796-445E-9A73-0AB919D620F7} = {393265B4-2796-445E-9A73-0AB919D620F7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventServer", "EventServer\EventServer.csproj", "{393265B4-2796-445E-9A73-0AB919D620F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FD124B0-F616-4AB1-BEE8-3E54B06738DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD124B0-F616-4AB1-BEE8-3E54B06738DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD124B0-F616-4AB1-BEE8-3E54B06738DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD124B0-F616-4AB1-BEE8-3E54B06738DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393265B4-2796-445E-9A73-0AB919D620F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393265B4-2796-445E-9A73-0AB919D620F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393265B4-2796-445E-9A73-0AB919D620F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393265B4-2796-445E-9A73-0AB919D620F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2A07855-5A44-4BAC-8084-337C74DB6676}
+	EndGlobalSection
+EndGlobal
